@@ -1,25 +1,37 @@
 var timer = document.getElementById('timer');
 var start = document.getElementById('start');
 var question = document.getElementById('question');
+var info = document.getElementById("info");
 var answer =document.getElementById("answers");
-var endquiz=document.querySelector("#hide");
+var quizsection=document.querySelector("#hide");
+var entername=document.querySelector(".hidebtn");
+var input =document.querySelector("input")
+var submit=document.getElementById("submit");
+var score="";
 start.addEventListener("click", startquiz);
 var message ="Game is over";
 var secondsLeft = 5;
 
  function  startquiz()
- {    
+ { 
+    
+    start.setAttribute("style", "display:none;");
+    info.setAttribute("style", "display:none;");
+    quizsection.setAttribute("style", "display:block;");
+    
     let timerdown =setInterval(() => {
         secondsLeft--;
         timer.innerHTML = secondsLeft + " seconds left till the game ends.";
         if(secondsLeft === 0) {
           clearInterval(timerdown);
           timer.innerHTML = message;
-         endquiz[0].setAttribute("style", "display: none;")
+         quizsection.setAttribute("style", "display: none;");
+         entername.setAttribute("style", "display:inline-block;");
+         input.setAttribute("style", "display: inline-block;");
+         submit.setAttribute("style", "display: inline-block;");
         }
     
       }, 1000);
-   console.log("started")
  }
  
 
