@@ -28,12 +28,17 @@ var secondsLeft = 5;
          quizsection.setAttribute("style", "display: none;");
          entername.setAttribute("style", "display:inline-block;");
          input.setAttribute("style", "display: inline-block;");
-         submit.setAttribute("style", "display: inline-block;");
+         
         }
     
       }, 1000);
+     displayquestion();  
  }
  
+  function displayquestion (){
+    question.innerHTML= "Hello"
+
+  }
 
 let questions = [
     {
