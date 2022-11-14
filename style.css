@@ -36,6 +36,7 @@ flex-direction: column;
 }
 #answer1,  #answer2, #answer3, #answer4 {
     margin: 10px;
+    font-size: 15px;
 }
 .hidebtn {
     display:none;

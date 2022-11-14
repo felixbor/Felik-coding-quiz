@@ -2,11 +2,14 @@ var timer = document.getElementById('timer');
 var start = document.getElementById('start');
 var question = document.getElementById('question');
 var info = document.getElementById("info");
-var answer =document.getElementById("answers");
+var answer1 =document.getElementById("answer1");
+var answer2 =document.getElementById("answer2");
+var answer3 =document.getElementById("answer3");
+var answer4 =document.getElementById("answer4");
 var quizsection=document.querySelector("#hide");
 var entername=document.querySelector(".hidebtn");
 var input =document.querySelector("input")
-var submit=document.getElementById("submit");
+
 var score="";
 start.addEventListener("click", startquiz);
 var message ="Game is over";
@@ -36,8 +39,15 @@ var secondsLeft = 5;
  }
  
   function displayquestion (){
-    question.innerHTML= "Hello"
-
+    question.innerHTML= questions[0].question;
+    answer1.innerHTML = questions[0].answer[0].text;
+    answer2.innerHTML = questions[0].answer[1].text;
+    answer3.innerHTML = questions[0].answer[2].text;
+    answer4.innerHTML = questions[0].answer[3].text;
+     console.log(questions[0].answer[0].text); 
+     console.log(questions[0].answer[1].text); 
+     console.log(questions[0].answer[2].text); 
+     console.log(questions[0].answer[3].text);
   }
 
 let questions = [
