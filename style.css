@@ -1,5 +1,5 @@
 * {
-    background-color: rgb(127, 169, 169);
+    background-color: rgb(37, 118, 159);
 }
 body {
  display: flex;
@@ -11,17 +11,24 @@ flex-direction: column;
     text-align: center;
     display:flex;
     flex-direction: column;
-    border: 5px solid rgb(13, 108, 240);
+    border: 5px solid rgb(203, 199, 182);
     width: 600px;
+    box-shadow:  0 0 10px white;
+   
     background-color: antiquewhite;
     border-radius: 7px;
     
 }
+#timer {
+font-size: 1.8em;
+color: rgb(246, 208, 158);
+}
 
 #info{
-    font-size: 25px;
+    font-size: 30px;
     display:block;
     color: rgb(246, 208, 158);
+    line-height: 40px;
 }
 #hide {
     display:none;
@@ -36,7 +43,9 @@ flex-direction: column;
 }
 #answer1,  #answer2, #answer3, #answer4 {
     margin: 10px;
-    font-size: 15px;
+    font-size: 20px;
+
+
 }
 .hidebtn {
     display:none;
@@ -63,3 +72,6 @@ input{
     border-radius: 5px;
 }
 
+#buttons :hover {
+    box-shadow:  0 0  10px white;
+}
