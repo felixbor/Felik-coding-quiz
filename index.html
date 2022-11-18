@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css" />
-    <title>Document</title>
+    <title>Felix coding quiz</title>
 </head>
 <body>
     <H1>Let's play the game</H1>
@@ -13,23 +13,24 @@
 
     </p>
      <div class="container"> 
-        <div id="info"> Please play coding quiz. You will have 60 seconds to answer 5 questions. You will get  20 points for every correct answer and 10seconds penalty for every wrong answer</div>
+        <div id="info"> Please play coding quiz. You will have 60 seconds to answer 5 questions. You will get  20 points for every correct answer and 10 seconds penalty for every wrong answer.</div>
         <div id="hide">
          <div id="question">Question:</div>
           <div  class=answers id="answers">
-            <button  class ="button" onclick="selectanswer(event)" id="answer1">Answer1</button>
-            <button class ="button"   onclick="selectanswer(event)"  id="answer2">Answer2</button>
-            <button  class ="button" onclick="selectanswer(event)"id="answer3">Answer3</button>
-            <button class ="button" onclick="selectanswer(event)"id="answer4">Answer4</button>
+            <button  class ="button" onclick="selectanswer(event)" id="answer1"></button>
+            <button class ="button"   onclick="selectanswer(event)"  id="answer2"></button>
+            <button  class ="button" onclick="selectanswer(event)"id="answer3"></button>
+            <button class ="button" onclick="selectanswer(event)"id="answer4"></button>
          
           </div>
         </div>
         <div id="buttons">
         <button id="start">Start</button>
-        <button  class="hidebtn" id="name"> Enter Name and submit</button>
+        <button  class="hidebtn" id="name"> Enter Name and Submit</button>
         <input   type="text" id ="inputvalue" >
-        <button  class="hidebtn" id="tryagain"> Want to try again?</button>
-        
+        <button  class="hidebtn" id="tryagain"> Try again</button>
+        <p class="hidebtn" id="textscore">Your score: </p>
+        <p class="hidebtn" id="fscore"> </p>
         </div>
 
 

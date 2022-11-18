@@ -2,15 +2,15 @@ var timer = document.getElementById('timer');
 var start = document.getElementById('start');
 var question = document.getElementById('question');
 var info = document.getElementById("info");
-var answer1 = document.getElementById("answer1");
-var answer2 = document.getElementById("answer2");
-var answer3 = document.getElementById("answer3");
-var answer4 = document.getElementById("answer4");
-var quizsection = document.querySelector("#hide");
-var entername = document.querySelector(".hidebtn");
+var tryagain = document.getElementById('tryagain');
+var quizsection = document.querySelector("#hide"); 
+var entername = document.querySelector("#name");
 var inputname = document.querySelector("input");
 var btn = document.querySelector("button");
+var flscore = document.getElementById('fscore');
+var textscore =document.getElementById('textscore');
 var score = 0
+
 start.addEventListener("click", startquiz);
 var message = "Game is over";
 
@@ -20,6 +20,7 @@ var index = 0;
 let timerdown;
 
 function startquiz() {
+tryagain.setAttribute("style", "display: none")
   start.setAttribute("style", "display:none;");
   info.setAttribute("style", "display:none;");
   quizsection.setAttribute("style", "display:block;");
@@ -31,7 +32,7 @@ function startquiz() {
       endgame()
     }
 
-  }, 1000);
+  }, 1000)
   displayquestion();
 }
 
@@ -47,7 +48,6 @@ var answerBtn = document.querySelectorAll(".button")
   answer2.textContent = questions[index].answer[1].text;
   answer3.textContent = questions[index].answer[2].text;
   answer4.textContent = questions[index].answer[3].text;
-
 }
 
 function endgame() {
@@ -57,6 +57,13 @@ function endgame() {
   quizsection.setAttribute("style", "display: none;");
   entername.setAttribute("style", "display:inline-block;");
   inputname.setAttribute("style", "display: inline-block;");
+  flscore.setAttribute("style", "display: inline-block;");
+  textscore.setAttribute("style", "display: inline-block;");
+  flscore.innerHTML = score;
+  secondsLeft = 60;
+  index = 0;
+  score =0;
+
 
 }
 function selectanswer(event) {
@@ -82,7 +89,7 @@ function selectanswer(event) {
   if (index == questions.length) {
     endgame();
   } else {
-  
+
  setTimeout(displayquestion,1000)
 
   }
@@ -91,17 +98,25 @@ function selectanswer(event) {
 entername.addEventListener("click", getinfo)
 function getinfo() {
   var inputvalue = document.getElementById("inputvalue").value
-  var userobject = {
+  var userobject =[ {
     name: inputvalue,
     score: score
-  }
+  }]
   window.localStorage.setItem('userdata', JSON.stringify(userobject));
   reloadPage();
-
  
 }
  function reloadPage(){
-     window.location.reload();
+  tryagain.setAttribute("style", "display: inline-block")
+  entername.removeAttribute("style");
+  inputname.removeAttribute("style", )
+  flscore.setAttribute("style", "display: none;");
+  textscore.setAttribute("style", "display: none;");
+
+  tryagain.addEventListener("click", 
+  startquiz)
+
+  
  }
 let questions = [
   {

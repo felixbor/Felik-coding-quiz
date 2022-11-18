@@ -1,11 +1,15 @@
 * {
     background-color: rgb(37, 118, 159);
+    color: rgb(6, 28, 152);
 }
 body {
  display: flex;
  justify-content: center;
  align-items: center;
 flex-direction: column;
+}
+h1{
+    text-shadow: 0 0 5px wheat;
 }
 .container {
     text-align: center;
@@ -32,6 +36,12 @@ color: rgb(246, 208, 158);
 }
 #hide {
     display:none;
+   
+}
+#question {
+    font-size: 25px;
+    color: antiquewhite;
+    padding-top:10px;
 }
 #answers {
     display: flex;
@@ -59,7 +69,7 @@ input{
  
 }
 
-#start, #name {
+#start, #name, #tryagain {
     
     background-color:burlywood ;
     font-weight: bolder;
