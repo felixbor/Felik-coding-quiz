@@ -4,4 +4,4 @@ Project offers  to lay codding quiz. A  User answer to coding related questions 
 
 GITHUB repo: https://github.com/felixbor/Feliks-coding-quiz
 page: https://felixbor.github.io/Feliks-coding-quiz/
-! [screenshot]  (./screenshot.JPG)
+![screenshot]  (./screenshot.JPG)
