@@ -10,7 +10,7 @@ var btn = document.querySelector("button");
 var flscore = document.getElementById('fscore');
 var textscore =document.getElementById('textscore');
 var score = 0
-
+var record=0
 start.addEventListener("click", startquiz);
 var message = "Game is over";
 
@@ -60,6 +60,7 @@ function endgame() {
   flscore.setAttribute("style", "display: inline-block;");
   textscore.setAttribute("style", "display: inline-block;");
   flscore.innerHTML = score;
+  record=score;
   secondsLeft = 60;
   index = 0;
   score =0;
@@ -100,7 +101,7 @@ function getinfo() {
   var inputvalue = document.getElementById("inputvalue").value
   var userobject =[ {
     name: inputvalue,
-    score: score
+    score: record
   }]
   window.localStorage.setItem('userdata', JSON.stringify(userobject));
   reloadPage();
